@@ -29,22 +29,35 @@ PriceRadar is a web application designed to help users find the best deals from 
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Parvsharma04/PriceRadar.git
    cd PriceRadar
    ```
 
-2. Install dependencies:
+2. Install dependencies for frontend:
+
    ```bash
+   cd frontend
    npm install
    ```
 
-3. Set up environment variables:
-   - Create a `.env` file and add your API keys and configurations.
+3. Install dependencies for backend:
 
-4. Start the development server:
    ```bash
-   npm start
+   cd backend
+   npm install
+   ```
+
+4. Start the development server(frontend):
+
+   ```bash
+   npm run dev
+   ```
+
+5. Start the development server(backend):
+   ```bash
+   nodemon src/app.js
    ```
 
 ## Usage
