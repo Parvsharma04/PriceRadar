@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "./Contact";
-import NavBar from './NavBar';
-
-
+import Contact from "./Contact";
+import NavBar from "./NavBar";
 const Layout = ({ children }) => {
   return (
     <>
-      <NavBar />
-      <main>{children}</main>
-      <Footer />
+      <div className="p-0 m-0 bg-black text-white">
+        <NavBar />
+        <main>{children}</main>
+        <Contact />
+      </div>
     </>
   );
 };

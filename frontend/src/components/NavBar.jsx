@@ -1,3 +1,4 @@
+"use client";
 import {
   Button,
   Link,
@@ -6,25 +7,25 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
+import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
   return (
-    <Navbar shouldHideOnScroll>
+    <Navbar shouldHideOnScroll className="dark">
       <NavbarBrand>
-        <p className="font-bold text-inherit">ACME</p>
+        <p className="font-bold text-inherit">PriceRadar</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
+        <NavbarItem isActive={location.pathname === "/"}>
+          <Link color="foreground" href="/">
+            Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
+        <NavbarItem isActive={location.pathname === "/about"}>
+          <Link href="/about">About</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem isActive={location.pathname === "/"}>
           <Link color="foreground" href="#">
             Integrations
           </Link>
@@ -44,4 +45,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;

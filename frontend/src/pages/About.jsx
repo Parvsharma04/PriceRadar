@@ -1,9 +1,9 @@
-const About = () =>{
+const About = () => {
   return (
     <>
-      <div>About</div>
+      <div className="h-screen bg-black">About Page</div>
     </>
   );
-}
+};
 
-export default About
+export default About;
