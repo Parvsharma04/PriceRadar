@@ -7,6 +7,8 @@ import "./index.css";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/not-found";
+import App from './App.jsx'
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,6 +20,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <App />
         </Layout>
       </Router>
     </NextUIProvider>
